@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zafraan | Royal Awadhi Restaurant in Hazratganj, Lucknow</title>
+    <meta
+      name="description"
+      content="Zafraan serves authentic Awadhi cuisine in Lucknow: Galouti kebabs, dum pukht biryani, nihari and shahi desserts. Reserve your table online."
+    />
+    <meta name="theme-color" content="#0f0d0b" />
+    <link rel="canonical" href="https://zafraan-lucknow.netlify.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zafraan" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="Zafraan | Royal Awadhi Kitchen, Lucknow" />
+    <meta
+      property="og:description"
+      content="Galouti kebabs, dum pukht biryani and recipes from the kitchens of the Nawabs. Book your table at Zafraan, Hazratganj."
+    />
+    <meta property="og:url" content="https://zafraan-lucknow.netlify.app/" />
+    <meta property="og:image" content="https://zafraan-lucknow.netlify.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lucknowi biryani served at Zafraan restaurant" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zafraan | Royal Awadhi Kitchen, Lucknow" />
+    <meta
+      name="twitter:description"
+      content="Authentic Awadhi cuisine in the heart of Lucknow. Reserve your table online."
+    />
+    <meta name="twitter:image" content="https://zafraan-lucknow.netlify.app/og-image.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hero image jaldi load ho (LCP) -->
+    <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
+
+    <!-- Theme: page paint hone se pehle saved theme lagao (flash nahi aayega) -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('zafraan-theme');
+          if (t === 'light') {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          } else {
+            document.documentElement.style.colorScheme = 'dark';
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Structured data (Google ke liye) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Zafraan",
+        "url": "https://zafraan-lucknow.netlify.app/",
+        "image": "https://zafraan-lucknow.netlify.app/og-image.jpg",
+        "servesCuisine": ["Awadhi", "Mughlai", "North Indian"],
+        "priceRange": "₹₹₹",
+        "telephone": "+91-98765-43210",
+        "acceptsReservations": "True",
+        "menu": "https://zafraan-lucknow.netlify.app/#menu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "14, Shahnajaf Road, Hazratganj",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "226001",
+          "addressCountry": "IN"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "12:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+            "opens": "12:00",
+            "closes": "23:30"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!--
+      Netlify Forms detection ke liye hidden static form.
+      React form build ke baad JS se banta hai, isliye Netlify use dekh nahi pata.
+      Field names React form se EXACT match hone chahiye.
+    -->
+    <form name="reservation" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="date" name="date" />
+      <input type="text" name="time" />
+      <input type="text" name="guests" />
+      <input type="text" name="occasion" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

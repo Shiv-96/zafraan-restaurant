@@ -1,0 +1,75 @@
+export const MENU = [
+  {
+    id: 'starters',
+    label: 'Shuruaat',
+    note: 'Starters',
+    items: [
+      { name: 'Dahi ke Kebab', desc: 'Hung-curd patties with green chilli and ginger, crisp outside and creamy within.', price: 320, veg: true },
+      { name: 'Paneer Tikka Zafraani', desc: 'Cottage cheese marinated in saffron yoghurt, charred in the tandoor.', price: 360, veg: true },
+      { name: 'Subz Shami Kebab', desc: 'Pan-seared patties of chana dal, spinach and Awadhi spices.', price: 300, veg: true },
+      { name: 'Murgh Malai Tikka', desc: 'Chicken in cream, cheese and cardamom, gently smoked over coal.', price: 420, veg: false },
+      { name: 'Mahi Tikka Ajwaini', desc: 'River sole with carom seeds and mustard oil, tandoor-roasted.', price: 480, veg: false },
+    ],
+  },
+  {
+    id: 'kebabs',
+    label: 'Kebab-e-Khaas',
+    note: 'Signature Kebabs',
+    items: [
+      { name: 'Galouti Kebab', desc: 'Our pride: melt-in-the-mouth minced mutton, served on ulte tawe ka paratha.', price: 520, veg: false, special: true },
+      { name: 'Kakori Kebab', desc: 'Silky seekh of finely minced mutton, scented with rose and kewra.', price: 540, veg: false },
+      { name: 'Shami Kebab', desc: 'Mutton and chana dal patties, shallow-fried on the mahi tawa.', price: 440, veg: false },
+      { name: 'Murgh Seekh Kebab', desc: 'Minced chicken with fresh herbs, skewered and grilled.', price: 420, veg: false },
+      { name: 'Rajma Galouti', desc: 'A vegetarian take on the classic, made with slow-cooked kidney beans.', price: 340, veg: true },
+    ],
+  },
+  {
+    id: 'curries',
+    label: 'Shahi Handi',
+    note: 'Curries',
+    items: [
+      { name: 'Mutton Nihari', desc: 'Shank slow-cooked overnight for 12 hours in a rich, spiced broth.', price: 560, veg: false, special: true },
+      { name: 'Murgh Korma Awadhi', desc: 'Chicken in a velvety onion, cashew and kewra gravy.', price: 480, veg: false },
+      { name: 'Nargisi Kofta', desc: 'Egg wrapped in spiced mince, simmered in a saffron curry.', price: 520, veg: false },
+      { name: 'Paneer Pasanda', desc: 'Stuffed paneer slices in a mild, nutty tomato gravy.', price: 390, veg: true },
+      { name: 'Subz Qorma', desc: 'Seasonal vegetables in a fragrant white korma.', price: 340, veg: true },
+      { name: 'Dal Zafraani', desc: 'Black lentils simmered overnight, finished with butter and saffron.', price: 320, veg: true },
+    ],
+  },
+  {
+    id: 'biryani',
+    label: 'Dum Pukht',
+    note: 'Biryani',
+    items: [
+      { name: 'Lucknowi Mutton Biryani', desc: 'Aged basmati and tender mutton, sealed and slow-cooked on dum.', price: 520, veg: false, special: true },
+      { name: 'Murgh Dum Biryani', desc: 'Chicken layered with saffron rice, fried onions and mint.', price: 460, veg: false },
+      { name: 'Kathal Biryani', desc: 'Young jackfruit cooked the Awadhi way. A vegetarian favourite.', price: 380, veg: true },
+      { name: 'Subz Dum Biryani', desc: 'Garden vegetables and paneer with whole spices and rose water.', price: 360, veg: true },
+    ],
+  },
+  {
+    id: 'breads',
+    label: 'Roti & Naan',
+    note: 'Breads',
+    items: [
+      { name: 'Sheermal', desc: 'Saffron-milk flatbread, mildly sweet. The classic Lucknowi pairing.', price: 90, veg: true },
+      { name: 'Ulte Tawe ka Paratha', desc: 'Soft layered paratha cooked on an inverted griddle.', price: 70, veg: true },
+      { name: 'Warqi Paratha', desc: 'Flaky, many-layered paratha brushed with ghee.', price: 80, veg: true },
+      { name: 'Butter Naan', desc: 'Tandoor-baked naan finished with white butter.', price: 70, veg: true },
+      { name: 'Roomali Roti', desc: 'Handkerchief-thin bread tossed over an inverted dome.', price: 50, veg: true },
+    ],
+  },
+  {
+    id: 'desserts',
+    label: 'Meetha & Sharbat',
+    note: 'Desserts & Drinks',
+    items: [
+      { name: 'Shahi Tukda', desc: 'Ghee-fried bread soaked in saffron rabri, topped with nuts.', price: 220, veg: true, special: true },
+      { name: 'Zafraani Phirni', desc: 'Ground rice pudding set in a clay pot, with saffron and pistachio.', price: 180, veg: true },
+      { name: 'Kulfi Falooda', desc: 'Malai kulfi with vermicelli, basil seeds and rose syrup.', price: 200, veg: true },
+      { name: 'Thandai', desc: 'Chilled milk with almonds, fennel, rose and pepper.', price: 150, veg: true },
+      { name: 'Gulab Sharbat', desc: 'Rose petal cooler with lemon and sabja.', price: 120, veg: true },
+      { name: 'Kesar Chai', desc: 'Saffron tea brewed the old Lucknow way.', price: 90, veg: true },
+    ],
+  },
+]

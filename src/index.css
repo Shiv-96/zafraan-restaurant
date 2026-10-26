@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* .dark class se dark mode (toggle ke liye) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Fixed brand tokens */
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-gold-300: #ecd598;
+  --color-gold-400: #dcbb67;
+  --color-gold-500: #c9a24a;
+  --color-gold-600: #a8822f;
+  --color-ink: #1a1208;
+}
+
+/* Theme ke hisaab se badalne wale colors */
+:root {
+  --bg: #faf6ef;
+  --surface: #ffffff;
+  --surface-2: #f2eadc;
+  --fg: #1d1a16;
+  --muted: #655c51;
+  --line: #e4d9c6;
+  --accent: #8a6a1f;
+}
+
+.dark {
+  --bg: #0f0d0b;
+  --surface: #171411;
+  --surface-2: #221d18;
+  --fg: #f3ede3;
+  --muted: #a89d8c;
+  --line: #2f2822;
+  --accent: #dcbb67;
+}
+
+/* Inse classes bante hain: bg-bg, bg-surface, text-fg, text-muted, border-line, text-accent */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1rem;
+  @media (width >= 640px) {
+    padding-inline: 1.5rem;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased transition-colors duration-300;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background: var(--color-gold-500);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold tracking-wide text-ink shadow-lg shadow-gold-500/20 transition hover:-translate-y-0.5 hover:bg-gold-400 active:translate-y-0;
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition hover:border-white hover:bg-white/10;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-semibold text-fg transition hover:border-gold-500 hover:text-accent;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-fg;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-line bg-bg px-4 py-3 text-sm text-fg transition outline-none placeholder:text-muted/70 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30;
+  }
+}
+
+/* Scroll par halka fade-up */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Accessibility: jo log animation band rakhte hain */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
